@@ -7,7 +7,7 @@ export class SearchForm {
     this.id = id
   }
 
-  async onSubmit(e) {
+  async handleSubmit(e) {
     e.preventDefault()
 
     const value = document.getElementById('query').value.trim()
@@ -30,6 +30,6 @@ export class SearchForm {
 
   initEventListeners() {
     const form = document.getElementById(this.id);
-    form.addEventListener('submit', this.onSubmit)
+    form.addEventListener('submit', this.handleSubmit)
   }
 }
